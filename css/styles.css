@@ -571,11 +571,6 @@ header {
     margin-right: 30px;
 }
 
-.item:hover,
-item:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
 .item-link {
     display: flex;
     justify-content: center;
@@ -669,4 +664,9 @@ button[buttons]:hover {
     border-left: 1px solid rgba(238, 238, 238, 1);
     border-right: 1px solid rgba(238, 238, 238, 1);
     border-radius: 0px 0px 4px 4px;
+}
+
+.work-example-list .item:hover,
+item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }

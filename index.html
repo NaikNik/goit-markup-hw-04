@@ -57,9 +57,19 @@
       <section class="hero">
         <div class="container hero-container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="buttons button-1" type="button">
+          <button class="buttons button-1 data-modal-open" type="button">
             Заказать услугу
           </button>
+          <div class="thumn-modal">
+            <div class="data-modal">
+              <p></p>
+              <button class="data-modal-close">
+                <svg class="close" width="30" height="30">
+                  <use href="./images/close.svg"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -448,6 +458,22 @@
                 </div>
             </div>
         </footer>
+        <script src="./js/modal.js">
+            (() => {
+                const refs = {
+                    openModalBtn: document.querySelector('[data-modal-open]'),
+                    closeModalBtn: document.querySelector('[data-modal-close]'),
+                    modal: document.querySelector('[data-modal]'),
+                };
+
+                refs.openModalBtn.addEventListener('click', toggleModal);
+                refs.closeModalBtn.addEventListener('click', toggleModal);
+
+                function toggleModal() {
+                    refs.modal.classList.toggle('is-hidden');
+                }
+            })();
+        </script>
 </body>
 
 </html>
